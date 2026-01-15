@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Checklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1>Study Tracker</h1>
+            <p class="subtitle">Stay organized, stay ahead.</p>
+        </header>
+
+        <section id="reminder-section" class="reminder-section hidden">
+            <!-- Reminders injected here via JS -->
+        </section>
+
+        <section class="control-panel glass-panel">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="e.g. Mathematics" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Task Description</label>
+                    <input type="text" id="description" placeholder="e.g. Complete Chapter 4 Exercises" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dueDate">Due Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Add Task</button>
+            </form>
+        </section>
+
+        <div class="actions-bar">
+            <button id="clear-completed" class="btn-secondary">Clear Completed</button>
+        </div>
+
+        <main id="tasks-container" class="tasks-container">
+            <!-- Tasks grouped by subject will be rendered here -->
+             <div class="empty-state">
+                <p>No tasks yet. Add one above to get started!</p>
+             </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
