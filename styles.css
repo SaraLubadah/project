@@ -2,21 +2,23 @@
     --bg-color: #0f172a;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent-primary: #6366f1; /* Indigo */
-    --accent-secondary: #8b5cf6; /* Violet */
+    --accent-primary: #6366f1;
+    /* Indigo */
+    --accent-secondary: #8b5cf6;
+    /* Violet */
     --accent-glow: rgba(99, 102, 241, 0.5);
-    
+
     --priority-high: #f43f5e;
     --priority-medium: #f59e0b;
     --priority-low: #10b981;
-    
+
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    
+
     --radius-lg: 16px;
     --radius-md: 8px;
-    
+
     --font-family: 'Outfit', sans-serif;
 }
 
@@ -82,8 +84,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(30px, 30px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(30px, 30px);
+    }
 }
 
 .app-container {
@@ -104,6 +111,7 @@ h1 {
     font-size: 2.5rem;
     background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -154,7 +162,8 @@ label {
     font-weight: 500;
 }
 
-input, select {
+input,
+select {
     background: rgba(15, 23, 42, 0.6);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-md);
@@ -166,7 +175,8 @@ input, select {
     transition: all 0.2s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     border-color: var(--accent-primary);
     box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
@@ -343,9 +353,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     letter-spacing: 0.05em;
 }
 
-.priority-high { color: var(--priority-high); background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.3); }
-.priority-medium { color: var(--priority-medium); background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); }
-.priority-low { color: var(--priority-low); background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); }
+.priority-high {
+    color: var(--priority-high);
+    background: rgba(244, 63, 94, 0.15);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.priority-medium {
+    color: var(--priority-medium);
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.priority-low {
+    color: var(--priority-low);
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
 
 .due-date {
     display: flex;
@@ -402,7 +426,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .reminder-banner.info {
-    background: rgba(99, 102, 241, 0.15); /* Indigo tint */
+    background: rgba(99, 102, 241, 0.15);
+    /* Indigo tint */
     border: 1px solid rgba(99, 102, 241, 0.3);
     color: #c7d2fe;
 }
@@ -422,13 +447,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Mobile Adjustments */
@@ -437,12 +476,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         grid-template-columns: 1fr;
         gap: 8px;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     .blob {
-        opacity: 0.3; /* Reduce distraction on small screens */
+        opacity: 0.3;
+        /* Reduce distraction on small screens */
     }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: auto;
 }
